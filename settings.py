@@ -5,7 +5,7 @@ import os
 COMMAND_PREFIX = "vole"
 
 # The bot token. Keep this secret!
-BOT_TOKEN = "ODIzNjY4OTg4Mzg2MzQ0OTcw.YFkLhQ.A5QrHx-re8KDZFksJeWGCE9aPjc"
+BOT_TOKEN = "SECRET_TOKEN"
 
 # The now playing game. Set this to anything false-y ("", None) to disable it
 NOW_PLAYING = "Čekám na smaženíčko"
