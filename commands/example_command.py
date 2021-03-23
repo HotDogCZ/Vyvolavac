@@ -8,7 +8,7 @@ from random                 import randint
 # but in lowercase
 
 # So, a command class named Random will generate a 'random' command
-class Random(BaseCommand):
+class Nazdar(BaseCommand):
 
     def __init__(self):
         # A quick description for the help message
@@ -17,7 +17,7 @@ class Random(BaseCommand):
         # Parameters will be separated by spaces and fed to the 'params' 
         # argument in the handle() method
         # If no params are expected, leave this list empty or set it to None
-        params = ["lower", "upper"]
+        params = []
         super().__init__(description, params)
 
     # Override the handle() method
@@ -29,20 +29,6 @@ class Random(BaseCommand):
         # 'message' is the discord.py Message object for the command to handle
         # 'client' is the bot Client object
 
-        try:
-            lower_bound = int(params[0])
-            upper_bound = int(params[1])
-        except ValueError:
-            await client.send_message(message.channel,
-                                      "Please, provide valid numbers")
-            return
-
-        if lower_bound > upper_bound:
-            await client.send_message(message.channel,
-                        "The lower bound can't be higher than the upper bound")
-            return
-
-        rolled = randint(lower_bound, upper_bound)
-        msg = get_emoji(":game_die:") + f" You rolled {rolled}!"
+        msg = get_emoji(":middle_finger:") + f" Nejsem nějakej otrok vole, prostě si něco vymsli..."
 
         await message.channel.send(msg)
